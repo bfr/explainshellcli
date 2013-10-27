@@ -17,7 +17,7 @@ You need to have Perl with HTML::Tree installed
 
 **USAGE**
 
-Explain COMMAND [PARAMETERS]
+~ $ explain COMMAND [PARAMETERS]
 
 for example:
 
