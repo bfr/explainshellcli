@@ -1,0 +1,19 @@
+#!/usr/bin/env perl
+# Fetches explanation for shell commands and switches from http://explainshell.com/.
+# (c) MIT Roni Kantis http://www.linkedin.com/in/ronikantis
+use HTML::Tree;
+use LWP::Simple;
+
+die "Usage: explain [COMMAND] [ARG 1]..[ARG N]\nExample: explain ls -l -a\n" if @ARGV < 1;my $arg_string = join('+',@ARGV);
+
+my $url = "http://explainshell.com/explain?cmd=$arg_string";
+my $DOM = get($url);
+my $root = HTML::TreeBuilder->new;
+$root->utf8_mode(1);
+$root->parse($DOM);
+$root->eof();
+my @elements = $root->look_down("_tag", "td");
+foreach my $td_elem (@elements)
+{
+    printf "# %s\n", $td_elem->as_text();
+}
