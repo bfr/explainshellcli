@@ -1,13 +1,13 @@
 
 # Explain Shell- command line utility
 
-Simple Perl script to fetch and parse shell-command explanations from cli using the excellent explainshell.com service.
+Simple Perl script to fetch and parse shell-command explanations from cli using the excellent [explainshell.com](http://explainshell.com/) service.
 
 If there's something broken or shitty, please make a pull request.
 
 ## Prerequisites
 
-You need to have Perl with HTML::Tree and LWP::Simple installed
+You need to have Perl with **HTML::Tree** and **LWP::Simple** installed
 
 (For help with installing CPAN-modules, see http://www.cpan.org/modules/INSTALL.html)
 
