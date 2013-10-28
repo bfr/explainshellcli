@@ -11,7 +11,7 @@ Just put "explain"-file somewhere along your $PATH and make it executable
 
 (chmod +x ./explain).
 
-You need to have Perl with HTML::Tree installed 
+You need to have Perl with HTML::Tree and LWP::Simple installed. 
 
 (For help with installing CPAN-modules, see http://www.cpan.org/modules/INSTALL.html)
 
